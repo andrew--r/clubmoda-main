@@ -1,0 +1,813 @@
+body
+	font-family: "HelveticaNeueLight", Helvetica, sans-serif
+	font-size: 100%
+	min-width: 996px
+a
+	color: #0089a6
+	&:hover
+		color: #a5509e
+// Определяем ширину контейнера
+.container
+	width: 976px
+	margin: auto
+.header
+	font-size: 0.75em
+	.header__in
+		background: #faf8f5
+	.header__top
+		position: relative
+
+		padding: 0 53px
+
+		background: #faf8f5
+
+		line-height: 35px
+		vertical-align: middle
+
+		+clr
+	.header__description
+		float: left
+
+		color: #666
+	.header__nav
+		float: right
+	.header__notes
+		position: absolute
+		right: 260px
+		a
+			color: #666
+			&:before
+				content: ''
+				display: inline-block
+				position: relative
+				left: -5px
+				+s(note)
+	.header__bottom
+		position: relative
+		padding: 20px 53px
+
+		background: #fff
+
+		+clr
+	.header__logo
+		float: left
+		vertical-align: middle
+		text-indent: -9999px
+		+s(logo)
+	.header__phone
+		position: absolute
+		top: 27px
+		left: 202px
+		p
+			font-size: 1.5em
+	.header__search
+		position: absolute
+		top: 30px
+		right: 214px
+		input[type='text']
+			display: block
+			float: left
+			width: 300px
+			padding-left: 10px
+			margin: 5px 0
+
+			font-size: 1.333em
+			line-height: 1
+
+			color: #666
+			font-family: "HelveticaNeueLight"
+		input[type='submit']
+			display: block
+			float: right
+			margin: 5px 4px 5px 0
+			padding: 0
+			+s(search)
+			&:active
+				padding: 0
+				margin: 5px 4px 5px 0
+				border: 0
+	.search
+		width: 328px
+		height: 29px
+		border: 1px solid #959595
+	.header__cart
+		float: right
+		text-align: right
+		.cart-icon
+			display: inline-block
+			margin-left: 5px
+			+s(cart)
+		a
+			font-size: 1.833em
+			line-height: 0.9em
+			color: #a5509e
+.nav
+	background: #a5509e
+	ul.container
+		margin: auto
+		padding: 0 38px
+
+		background: #a5509e
+
+		+clr
+	.nav__item
+		position: relative
+		display: block
+		float: left
+
+		text-align: center
+		&:hover
+			background: #fff
+			a
+				color: black
+		&:hover .subnav
+			display: block
+		.nav__item--link
+			transition: 0.1s ease all
+			display: block
+			text-decoration: none
+			font-size: 1.25em
+			color: #fff
+			line-height: 41px
+			&:hover
+				color: black
+				background: #fff
+	.nav__new
+		width: 120px
+	.nav__woman
+		width: 157px
+	.nav__kids
+		width: 95px
+	.nav__big
+		width: 216px
+	.nav__discount
+		width: 150px
+	.nav__blog
+		width: 162px
+
+.subnav
+	display: none
+	position: absolute
+	z-index: 999
+	width: 900px
+	padding: 45px
+
+	text-align: left
+
+	background: #fff
+
+	+box-shadow(0 4px 8px rgba(0,0,0,0.3))
+
+	+clr
+	.subnav__left
+		float: left
+		width: 260px
+	.subnav__categories
+		margin-bottom: 25px
+		font-size: 1em
+	.subnav__category, .subnav__subcategory
+		color: #000
+		text-decoration: none
+		line-height: 1.4
+		&:hover
+			text-decoration: underline
+	.subnav__subcategories
+		margin-left: 15px
+	.subnav__right
+		float: right
+		width: 480px
+
+		margin-left: 60px
+
+		+clr
+	.subnav__left--atright
+		float: left
+		width: 240px
+	.subnav__right--atright
+		float: right
+		width: 187px
+		margin-left: 50px
+.subnav__woman
+	left: -120px
+.subnav__kids
+	left: -278px
+.subnav__big
+	left: -372px
+.subnav__discount
+	left: -588px
+.subnav__blog
+	left: -738px
+.info
+	height: 60px
+
+	background: #faf8f5
+
+	font-size: 0.875em
+
+	+clr
+	.container
+		position: relative
+		padding: 10px 53px
+
+		background: #faf8f5
+	.info__left
+		float: left
+		min-width: 250px
+	.info__time
+		color: #999
+		.last
+			+clr
+	.icon-time
+		float: left
+		margin-right: 15px
+		+s(time)
+	.info__right
+		float: right
+	.info__warranty
+		position: absolute
+		right: 98px
+		a
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				left: -53px
+				display: inline-block
+				+s(warranty)
+	.info__fitting
+		position: absolute
+		right: 268px
+		a
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				left: -68px
+				display: inline-block
+				+s(fitting)
+	.info__delivery
+		position: absolute
+		right: 490px
+		a
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				left: -64px
+				display: inline-block
+				+s(delivery)
+.slider
+	background: #f7f0f8
+	.slider__in
+		position: relative
+		width: 930px
+		margin: auto
+
+		background: #f7f0f8
+	.btn-prev
+		position: absolute
+		left: -23px
+		bottom: 182px
+		+s(prev)
+	.btn-next
+		position: absolute
+		right: -23px
+		bottom: 182px
+		+s(next)
+.slider
+	.container
+		position: relative
+		width: 930px
+.slide-clickable
+	cursor: pointer
+.slide
+	display: block
+	position: relative
+	height: 400px
+	width: 900px
+	margin: auto
+	background: url(../img/slide1.jpg) no-repeat center
+	.slide__btn
+		position: absolute
+		bottom: 80px
+		right: 42px
+
+		display: block
+		width: 181px
+
+		font-size: 1.313em
+		line-height: 1.762em
+
+		color: #fff
+		text:
+			align: center
+			decoration: none
+
+		background: #a5509e
+
+		&:hover
+			background: #8bc638
+.slider1__nav
+	position: absolute
+	top: 110px
+	left: 45px
+	a
+		display: inline-block
+		margin-top: 20px
+		color: black
+		&:hover
+			color: #a5509e
+	.active
+		position: relative
+		color: #a5509e
+		&:before
+			content: ''
+			position: absolute
+			left: -16px
+			top: 5px
+			+s(bullet)
+.top-models
+	padding: 46px 0 60px
+	background: #ede9e4
+	.container
+		position: relative
+		width: 930px
+		padding: 0 15px
+	.btn-prev
+		position: absolute
+		left: -38px
+		bottom: 196px
+		+s(prev)
+	.btn-next
+		position: absolute
+		right: -38px
+		bottom: 196px
+		+s(next)
+	.top-models__line
+		position: relative
+
+		width: 590px
+		height: 0
+		margin: 0 auto 45px
+
+		border-bottom: 1px solid #000
+	.top-models__heading
+		position: absolute
+		top: -0.6em
+		left: 146px
+
+		font:
+			family: "HelveticaNeueThin"
+			size: 1.875em
+			weight: lighter
+
+		background: #ede9e4
+
+		padding: 0 15px
+.top-model
+	.top-model__heading
+		margin-top: 15px
+		font:
+			weight: lighter
+			size: 0.875em
+		a
+			color: inherit
+			text-decoration: none
+	.top-model__price--new
+		margin-top: 15px
+		font-size: 1.25em
+	.top-model__price--old
+		margin-top: 5px
+
+		font-size: 1.25em
+		color: #808080
+	.line-through
+		text-decoration: line-through
+.blog
+	padding-top: 45px
+	background: #fff
+	.blog__line
+		position: relative
+
+		width: 493px
+		height: 0
+		margin: 0 auto 45px
+
+		border-bottom: 1px solid #000
+	.blog__heading
+		position: absolute
+		top: -0.6em
+		left: 146px
+
+		font:
+			family: "HelveticaNeueThin"
+			size: 1.875em
+			weight: lighter
+
+		background: #fff
+
+		padding: 0 15px
+	.container
+		width: 930px
+		padding: 15px
+	.column
+		float: left
+	.block
+		+clr
+	.btn-prev
+		position: absolute
+		left: -38px
+		bottom: 100px
+		+s(prev)
+	.btn-next
+		position: absolute
+		right: -38px
+		bottom: 100px
+		+s(next)
+.post
+	width: 450px
+	margin-top: 30px
+	.post__thumb
+		float: left
+		margin-right: 30px
+	.post__heading
+		font:
+			size: 1.125em
+			weight: lighter
+	.post__desc
+		margin-top: 5px
+		font:
+			size: 0.813em
+			family: "HelveticaNeueRoman"
+		+clr
+.superprice
+	margin: 105px 0 45px
+	background: #fff
+	.superprice__line
+		position: relative
+
+		width: 474px
+		height: 0
+		margin: 0 auto 45px
+
+		border-bottom: 1px solid #000
+	.superprice__heading
+		position: absolute
+		top: -0.6em
+		left: 146px
+
+		font:
+			family: "HelveticaNeueThin"
+			size: 1.875em
+			weight: lighter
+
+		background: #fff
+
+		padding: 0 15px
+.slider4__nav
+	position: absolute
+	top: 110px
+	left: 45px
+	a
+		display: inline-block
+		margin-top: 20px
+		color: black
+		&:hover
+			color: #a5509e
+	.active
+		position: relative
+		color: #a5509e
+		&:before
+			content: ''
+			position: absolute
+			left: -16px
+			top: 5px
+			+s(bullet)
+.slide--timer
+	background: url(../img/slide2.jpg)
+	padding: 0 15px
+	.slide__btn
+		bottom: 65px
+		right: 35px
+.timer
+	position: absolute
+	top: 46px
+	right: 60px
+	max-width: 140px
+
+	text-align: center
+	.timer__icon
+		display: block
+		margin: auto
+		+s(timer)
+	.timer__count
+		margin-bottom: -20px
+		font-size: 5em
+		color: #a5509e
+	.timer__days
+		font-size: 2.5em
+		color: #a5509e
+	.timer__info
+		margin-top: 10px
+		font-size: 1.125em
+.testimonials
+	padding: 45px 0 60px
+	background: #ede9e4
+	.testimonials__line
+		position: relative
+
+		width: 644px
+		height: 0
+		margin: 0 auto 45px
+
+		border-bottom: 1px solid #000
+	.testimonials__heading
+		position: absolute
+		top: -0.6em
+		left: 146px
+
+		font:
+			family: "HelveticaNeueThin"
+			size: 1.875em
+			weight: lighter
+
+		background: #ede9e4
+
+		padding: 0 15px
+	.container
+		width: 930px
+		padding: 0 15px
+		+clr
+	.testimonials__block
+		position: relative
+		width: 435px
+		height: 180px
+
+		margin-left: 30px
+		padding: 28px 30px
+
+		float: left
+
+		background: #fff
+		&:first-child
+			margin-left: 0
+	.testimonials__heading--inside
+		margin-bottom: 15px
+		font:
+			family: "HelveticaNeueRoman"
+			size: 1.125em
+			weight: lighter
+	.testimonials__text
+		font:
+			family: "HelveticaNeueRoman"
+			size: 0.813em
+	.testimonials__more
+		position: absolute
+		bottom: 28px
+		left: 30px
+
+		font-size: 0.875em
+	.btn-prev
+		position: absolute
+		top: 38px
+		left: -14px
+		+s(prev-small)
+	.btn-next
+		position: absolute
+		top: 38px
+		right: -14px
+		+s(next-small)
+	#slider5 .testimonials__more
+		position: static
+		display: block
+		margin-top: 15px
+.description
+	padding: 44px 0 60px
+
+	background: #fff
+	.description__line
+		position: relative
+
+		width: 699px
+		height: 0
+		margin: 0 auto 45px
+
+		border-bottom: 1px solid #000
+	.description__heading
+		position: absolute
+		top: -0.6em
+		left: 146px
+
+		font:
+			family: "HelveticaNeueThin"
+			size: 1.875em
+			weight: lighter
+
+		background: #fff
+
+		padding: 0 15px
+	.container
+		padding: 0 38px
+	.description-paragraph
+		margin-top: 15px
+		
+		font-size: 0.75em
+
+		color: #808080
+		&:first-child
+			margin-top: 0
+.footer
+	padding: 58px 0 30px
+
+	background: #ede9e4
+	.footer__left
+		float: left
+		width: 650px
+		padding-left: 39px
+	.footer__right
+		float: right
+		width: 314px
+		padding-right: 38px
+	.container
+		+clr
+	.footer__nav
+		margin-bottom: 30px
+		+clr
+	.footer__widget
+		width: 167px
+		float: left
+
+		font-size: 0.875em
+		li
+			margin-top: 10px
+			&:first-child
+				margin-top: 0
+		a
+			color: #000
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+		&:last-child
+	.footer__contact
+		margin-bottom: 15px
+		line-height: 1.4
+		font-size: 0.75em
+		+clr
+	.footer__contact--digital
+		float: left
+		width: 150px
+
+		a
+			color: #000
+			text-decoration: none
+	.footer__contact--address
+		float: left
+	.footer__copyright
+		margin-bottom: 60px
+		font-size: 0.75em
+	.footer__achievements
+		+clr
+	.footer__social
+		margin-bottom: 24px
+		+clr
+		a
+			display: block
+			float: left
+			margin-left: 12px
+			&:first-child
+				margin-left: 0
+	.footer__link
+		margin-bottom: 40px
+
+		font-size: 0.75em
+	.footer__payment
+		margin-bottom: 15px
+		.footer__payment-heading
+			margin-bottom: 12px
+			font:
+				size: 0.75em
+				weight: lighter
+			color: #666
+	.payment
+		+clr
+		.payment__method
+			float: left
+			margin-left: 15px
+			&:first-child
+				margin-left: 0
+	.footer__security
+		margin-bottom: 30px
+		.footer__security-heading
+			margin-bottom: 12px
+			font:
+				size: 0.75em
+				weight: lighter
+			color: #666
+	.security
+		+clr
+		.security__method
+			float: left
+			margin-left: 15px
+			&:first-child
+				margin-left: 0
+	.footer__stats
+		+clr
+	.footer__counter
+		float: left
+		margin-left: 15px
+		&:first-child
+			margin-left: 0
+	.footer__partners-heading
+		margin: 60px 0 15px 38px
+		font:
+			size: 0.75em
+			weight: lighter
+		color: #666
+	.footer__partners
+		position: relative
+		padding: 0 38px
+		.btn-next
+			position: absolute
+			top: 10px
+			right: 0
+			+s(next-footer)
+		.btn-prev
+			position: absolute
+			top: 10px
+			left: 0
+			+s(prev-footer)
+		.owl-item
+			text-align: center
+.achievement
+	position: relative
+	float: left
+	width: 200px
+
+	+clr
+	.achievement__img
+		float: left
+		min-width: 50px
+		margin-right: 10px
+
+		text-align: center
+	.achievement__description
+		position: absolute
+		left: 60px
+		bottom: 0
+	.achievement__status
+		color: #808080
+		margin-bottom: 5px
+		font-size: 0.625em
+	.achievement__name
+		font-size: 0.75em
+.subscribe
+	margin-bottom: 15px
+	.subscribe__input
+		width: 100%
+		height: 32px
+		padding: 7px 10px
+		margin-bottom: 7px
+
+		font-size: 1em
+		line-height: 1
+		border: 1px solid #959595
+		color: #808080
+		&:focus
+			border: 3px solid #a5509e
+	.subscribe__input--success
+		border: 3px solid #c6f240 !important
+		background: url(../img/success.png) no-repeat
+		background-position: 97% 50%
+	.subscribe__input--fail
+		border: 3px solid #ed1c24 !important
+		background: url(../img/fail.png) no-repeat
+		background-position: 97% 50%
+	.subscribe__submit
+		width: 100%
+		line-height: 32px
+
+		text-align: center
+		font-size: 1em
+		color: #fff
+
+		background: #a5509e
+.icon-od
+	+s(od)
+.icon-vk
+	+s(vk)
+.icon-fb
+	+s(fb)
+.icon-g
+	+s(g)
+.icon-tw
+	+s(tw)
+.icon-lj
+	+s(lj)
+#goTop
+	position: fixed
+	right: 42px
+	bottom: 10%
+	
+	cursor: pointer
+
+	+s(top)
