@@ -1,0 +1,9 @@
+.subscribe__input:focus {
+	padding: 5px 10px;
+}
+.subscribe__input--fail, .subscribe__input--success {
+	padding: 5px 10px;
+}
+.subnav {
+	border: 1px solid #ccc;
+}
