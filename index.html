@@ -7,55 +7,63 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css" media="screen">
 	<link rel="stylesheet" media="screen" href="css/screen.css">
 	<!--[if lt IE 10]>
-	<link rel="stylesheet" href="css/ie.css">
+		<link rel="stylesheet" href="css/ie.css">
+	<![endif]-->
+	<!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
 <body>
-<!--[if lt IE 8]>
-	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<!--[if lt IE 9]>
+	<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш браузер</a>, чтобы Вы могли пользоваться любыми сайтами без проблем.</p>
 <![endif]-->
 
 <!-- begin header -->
 <div class='header'>
 	<div class="header__in">
 		<!-- begin header__top -->
-		<div class="header__top container">
-			<div class="header__description">
-				<p>Розничный магазин одежды по ценам оптового склада</p>
-			</div>
-			<div class="header__nav">
-				<div class="header__notes">
-					<a href="#">20 заметок</a>
+		<div class="container">
+			<div class="header__top">
+				<div class="header__description hide-mobile">
+					<p>Розничный магазин одежды по ценам оптового склада</p>
 				</div>
-				<div class="header__login">
-					<a href="#">Войти</a> или <a href="#">Зарегистрироваться</a>
+				<div class="header__nav">
+					<div class="header__notes">
+						<a href="#">20 заметок</a>
+					</div>
+					<div class="header__login">
+						<a class='openModal' href="#modalLogin">Войти</a> или <a class='openModal' href="#modalRegister">Зарегистрироваться</a>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- end header__top -->
 	</div>
 	<!-- begin header__bottom -->
-	<div class="header__bottom container">
-		<div class="header__logo">
-			<h1>Club moda</h1>
-		</div>
-		<div class="header__phone">
-			<p>+7 495 374-63-90</p>
-			<a href="#">Заказать звонок</a>
-		</div>
-		<div class="header__search">
-			<form action="#">
-				<div class="search">
-					<input type="text" required=''>
-					<input type="submit" value=''>
-				</div>
-			</form>
-		</div>
-		<div class="header__cart">
-			<p>В корзине<span class="cart-icon"></span></p>
-			<a href="#">88 товаров</a>
+	<div class="container">
+		<div class="header__bottom">
+			<div class="header__logo">
+				<h1>Club moda</h1>
+			</div>
+			<div class="header__search">
+				<form action="#">
+					<div class="search">
+						<input type="text" required='' class='placeholder' data-placeholder='Поиск...'>
+						<input type="submit" value=''>
+					</div>
+				</form>
+			</div>
+			<div class="header__phone">
+				<p>+7 495 374-63-90</p>
+				<a href="#modalCall" class='openModal'>Заказать звонок</a>
+			</div>
+			<div class="header__cart">
+				<p>В корзине<span class="cart-icon"></span></p>
+				<a href="#">88 товаров</a>
+			</div>
 		</div>
 	</div>
 <!-- end header__bottom -->
@@ -145,7 +153,7 @@
 <!-- end nav -->
 
 <!-- begin info -->
-<div class="info">
+<div class="info hide-mobile">
 	<div class="container">
 		<div class="info__left">
 			<div class="info__time">
@@ -156,13 +164,13 @@
 		</div>
 		<div class="info__right">
 			<div class="info__delivery">
-				<a href="#">Доставка<br>по всей россии</a>
+				<a href="#modalInfoblock" class="openInfoblock" data-href='shipping'>Доставка<br>по всей россии</a>
 			</div>
 			<div class="info__fitting">
-				<a href="#">Примерка<br>перед покупкой</a>
+				<a href="#modalInfoblock" class="openInfoblock" data-href='order'>Примерка<br>перед покупкой</a>
 			</div>
 			<div class="info__warranty">
-				<a href="#">Гарантии<br>качества</a>
+				<a href="#modalInfoblock" class="openInfoblock" data-href='warranty'>Гарантии<br>качества</a>
 			</div>
 		</div>
 	</div>
@@ -174,31 +182,33 @@
 	<div class="container">
 		<div id="slider1">
 			<div class="slide slide-clickable"  data-href='#'>
-				<a href="#" class="slide__btn">Посмотреть</a>
-			</div>
-			<div class="slide slide-clickable slide--timer" data-href='#'>
-				<div class="timer">
-					<div class="timer__icon"></div>
-					<div class="timer__count">23</div>
-					<div class="timer__days">дня</div>
-					<div class="timer__info">до окончания акции</div>
+				<div class="slide__text">
+					<div class="slide__title"><h2>Скидки 40%</h2></div>
+					<div class="slide__description">Только на этой неделе!</div>
 				</div>
 				<a href="#" class="slide__btn">Посмотреть</a>
 			</div>
 			<div class="slide slide-clickable" data-href='#'>
+				<div class="slide__text">
+					<div class="slide__title"><h2>«DeVita»</h2></div>
+					<div class="slide__description">Спортивные костюмы<br>и комфортная<br>трикотажная одежда</div>
+				</div>
 				<a href="#" class="slide__btn">Посмотреть</a>
 			</div>
 			<div class="slide slide-clickable" data-href='#'>
+				<div class="slide__text">
+					<div class="slide__title"><h2>Скидки 40%</h2></div>
+					<div class="slide__description">Только на этой неделе!</div>
+				</div>
 				<a href="#" class="slide__btn">Посмотреть</a>
 			</div>
-		</div>
-		<div class="slider1__nav">
-			<ul>
-				<li><a href="#" class='active slider-trigger' data-slide='0'>25% на хиты лета</a></li>
-				<li><a href="#" class='slider-trigger' data-slide='1'>Распродажа продолжается!</a></li>
-				<li><a href="#" class='slider-trigger' data-slide='2'>Футболки и поло</a></li>
-				<li><a href="#" class='slider-trigger' data-slide='3'>Кроссовки и кеды</a></li>
-			</ul>
+			<div class="slide slide-clickable" data-href='#'>
+				<div class="slide__text">
+					<div class="slide__title"><h2>Скидки 40%</h2></div>
+					<div class="slide__description">Только на этой неделе!</div>
+				</div>
+				<a href="#" class="slide__btn">Посмотреть</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -206,7 +216,7 @@
 
 
 <!-- begin top-models -->
-<div class="top-models">
+<div class="top-models hide-tablet hide-mobile">
 	<div class="top-models__line">
 		<h2 class="top-models__heading">Модели этой недели</h2>
 	</div>
@@ -297,8 +307,76 @@
 </div>
 <!-- end top-models -->
 
+<!-- begin top-models--tablet -->
+<div class="top-models--tablet hide-desktop hide-mobile">
+	<div class="container">
+		<div class="top-models__line">
+			<h2 class="top-models__heading">Модели этой недели</h2>
+		</div>
+		<div class="top-model">
+			<a href="#">
+				<img src="img/top-model1.jpg" alt="купить платье 452532">
+			</a>
+			<h3 class='top-model__heading'><a href="#">Платье 452532</a></h3>
+			<p class="top-model__price--new">2300 руб.</p>
+			<p class="top-model__price--old"><span class="line-through">4600</span> руб.</p>
+		</div>
+		<div class="top-model">
+			<a href="#">
+				<img src="img/top-model2.jpg" alt="купить платье 452532">
+			</a>
+			<h3 class='top-model__heading'><a href="#">Платье 452532</a></h3>
+			<p class="top-model__price--new">2300 руб.</p>
+			<p class="top-model__price--old"><span class="line-through">4600</span> руб.</p>
+		</div>
+		<div class="top-model">
+			<a href="#">
+				<img src="img/top-model3.jpg" alt="купить платье 452532">
+			</a>
+			<h3 class='top-model__heading'><a href="#">Платье 452532</a></h3>
+			<p class="top-model__price--new">2300 руб.</p>
+			<p class="top-model__price--old"><span class="line-through">4600</span> руб.</p>
+		</div>
+		<div class="top-model">
+			<a href="#">
+				<img src="img/top-model4.jpg" alt="купить платье 452532">
+			</a>
+			<h3 class='top-model__heading'><a href="#">Платье 452532</a></h3>
+			<p class="top-model__price--new">2300 руб.</p>
+			<p class="top-model__price--old"><span class="line-through">4600</span> руб.</p>
+		</div>
+	</div>
+</div>
+<!-- end top-models--tablet -->
+
+<!-- begin top-models--mobile -->
+<div class="top-models--mobile hide-desktop hide-tablet show-mobile">
+	<div class="container">
+		<div style='text-align: center; margin-bottom: 10px'>
+			<h2 class="top-models__title">Модели этой недели</h2>
+		</div>
+		<div class="top-model">
+			<a href="#">
+				<img src="img/top-model1.jpg" alt="купить платье 452532">
+			</a>
+			<h3 class='top-model__heading'><a href="#">Платье 452532</a></h3>
+			<p class="top-model__price--new">2300 руб.</p>
+			<p class="top-model__price--old"><span class="line-through">4600</span> руб.</p>
+		</div>
+		<div class="top-model">
+			<a href="#">
+				<img src="img/top-model2.jpg" alt="купить платье 452532">
+			</a>
+			<h3 class='top-model__heading'><a href="#">Платье 452532</a></h3>
+			<p class="top-model__price--new">2300 руб.</p>
+			<p class="top-model__price--old"><span class="line-through">4600</span> руб.</p>
+		</div>
+	</div>
+</div>
+<!-- end top-models--mobile -->
+
 <!-- begin blog -->
-<div class="blog">
+<div class="blog hide-tablet hide-mobile">
 	<div class="blog__line">
 		<h2 class="blog__heading">Модный блог</h2>
 	</div>
@@ -360,8 +438,31 @@
 	</div>
 </div>
 <!-- end blog -->
+
+<!-- begin blog--tablet -->
+<div class="blog--tablet hide-desktop hide-mobile">
+	<div class="blog__line">
+		<h2 class="blog__heading">Модный блог</h2>
+	</div>
+	<div class="container">
+		<div class="column">
+			<div class="post">
+				<img class='post__thumb' src="http://placehold.it/168x100" alt="">
+				<h3 class='post__heading'><a href="#">Игровое начало и ещё немного текста</a></h3>
+				<p class="post__desc">Каждый модный сезон, начиная с представления дизайнерами круизных коллекций, мы оказываемся под влиянием трендов.</p>
+			</div>
+			<div class="post">
+				<img class='post__thumb' src="http://placehold.it/168x100" alt="">
+				<h3 class='post__heading'><a href="#">Игровое начало и ещё немного текста</a></h3>
+				<p class="post__desc">Каждый модный сезон, начиная с представления дизайнерами круизных коллекций, мы оказываемся под влиянием трендов.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end blog--tablet -->
+
 <!-- begin superprice -->
-<div class="superprice">
+<div class="superprice hide-mobile">
 	<div class="superprice__line">
 		<h2 class="superprice__heading">Супер цена</h2>
 	</div>
@@ -372,38 +473,40 @@
 	<div class="container">
 		<div id="slider4">
 			<div class="slide slide-clickable"  data-href='#'>
-				<a href="#" class="slide__btn">Посмотреть</a>
-			</div>
-			<div class="slide slide--timer slide-clickable"  data-href='#'>
-				<div class="timer">
-					<div class="timer__icon"></div>
-					<div class="timer__count">23</div>
-					<div class="timer__days">дня</div>
-					<div class="timer__info">до окончания акции</div>
+				<div class="slide__text">
+					<div class="slide__title"><h2>Скидки 40%</h2></div>
+					<div class="slide__description">Только на этой неделе!</div>
 				</div>
 				<a href="#" class="slide__btn">Посмотреть</a>
 			</div>
-			<div class="slide slide-clickable"  data-href='#'>
+			<div class="slide slide-clickable" data-href='#'>
+				<div class="slide__text">
+					<div class="slide__title"><h2>«DeVita»</h2></div>
+					<div class="slide__description">Спортивные костюмы<br>и комфортная<br>трикотажная одежда</div>
+				</div>
 				<a href="#" class="slide__btn">Посмотреть</a>
 			</div>
-			<div class="slide slide-clickable"  data-href='#'>
+			<div class="slide slide-clickable" data-href='#'>
+				<div class="slide__text">
+					<div class="slide__title"><h2>Скидки 40%</h2></div>
+					<div class="slide__description">Только на этой неделе!</div>
+				</div>
 				<a href="#" class="slide__btn">Посмотреть</a>
 			</div>
-		</div>
-		<div class="slider4__nav">
-			<ul>
-				<li><a href="#" class='active slider-trigger' data-slide='0'>25% на хиты лета</a></li>
-				<li><a href="#" class='slider-trigger' data-slide='1'>Распродажа продолжается!</a></li>
-				<li><a href="#" class='slider-trigger' data-slide='2'>Футболки и поло</a></li>
-				<li><a href="#" class='slider-trigger' data-slide='3'>Кроссовки и кеды</a></li>
-			</ul>
+			<div class="slide slide-clickable" data-href='#'>
+				<div class="slide__text">
+					<div class="slide__title"><h2>Скидки 40%</h2></div>
+					<div class="slide__description">Только на этой неделе!</div>
+				</div>
+				<a href="#" class="slide__btn">Посмотреть</a>
+			</div>
 		</div>
 	</div>
 </div>
 <!-- end slider -->
 
 <!-- begin testimonials -->
-<div class="testimonials">
+<div class="testimonials hide-mobile">
 	<div class="testimonials__line">
 		<h2 class="testimonials__heading">Преимущества и отзывы</h2>
 	</div>
@@ -434,7 +537,7 @@
 <!-- end testimonials -->
 
 <!-- begin description -->
-<div class="description">
+<div class="description hide-mobile">
 	<div class="description__line">
 		<h2 class="description__heading">Белорусские производители</h2>
 	</div>
@@ -447,7 +550,7 @@
 <!-- end description -->
 
 <!-- begin footer -->
-<div class="footer">
+<div class="footer hide-mobile">
 	<div class="container">
 		<div class="footer__left">
 			<!-- begin footer__nav -->
@@ -470,7 +573,7 @@
 					<li><a href="#">Таблица размеров</a></li>
 					<li><a href="#">Уход за изделиями</a></li>
 				</ul>
-				<ul class='footer__widget'>
+				<ul class='footer__widget hide-mobile'>
 					<li><a href="#">Новинки</a></li>
 					<li><a href="#">Женская одежда</a></li>
 					<li><a href="#">Детская одежда</a></li>
@@ -514,26 +617,26 @@
 		<div class="footer__right">
 			<!-- begin footer__social -->
 			<div class="footer__social">
-				<a href="#" class="icon-od"></a>
-				<a href="#" class="icon-vk"></a>
-				<a href="#" class="icon-fb"></a>
-				<a href="#" class="icon-g"></a>
-				<a href="#" class="icon-tw"></a>
-				<a href="#" class="icon-lj"></a>
+				<a href="#" target='_blank' class="icon-od"></a>
+				<a href="#" target='_blank' class="icon-vk"></a>
+				<a href="#" target='_blank' class="icon-fb"></a>
+				<a href="#" target='_blank' class="icon-g"></a>
+				<a href="#" target='_blank' class="icon-tw"></a>
+				<a href="#" target='_blank' class="icon-lj"></a>
 			</div>
 			<!-- end footer__social -->
 			<!-- begin subscribe -->
 			<div class="subscribe">
 				<form action="#" id='subscribe'>
 					<div class="subscribe__in">
-						<input type="email" value='Моя почта' class='subscribe__input'>
+						<input type="email" class='subscribe__input placeholder validate' data-placeholder='Моя почта'>
 					</div>
-					<input type="submit" value='Подписаться на рассылку' class='subscribe__submit'>
+					<input type="submit" value='Подписаться на рассылку' class='subscribe__submit btn openModal' href='#modalSuccess'>
 				</form>
 			</div>
 			<!-- end subscribe -->
 			<div class="footer__link">
-				<a href="#">Связаться с руководством</a>
+				<a href="#modalContact" class='openModal'>Связаться с руководством</a>
 			</div>
 
 			<div class="footer__payment">
@@ -559,9 +662,32 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container hide-mobile hide-tablet">
 		<h3 class="footer__partners-heading">Наши партнеры</h3>
 		<div class="footer__partners">
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
+		</div>
+	</div>
+	<div class="container hide-desktop">
+		<h3 class="footer__partners-heading">Наши партнеры</h3>
+		<div class="footer__partners--tablet">
 			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
 			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
 			<div class="footer__partner"><img src="http://placehold.it/83x52" alt=""></div>
@@ -585,10 +711,347 @@
 </div>
 <!-- end footer -->
 
+<!-- begin footer--mobile -->
+<div class="footer--mobile hide-tablet hide-desktop">
+	<div class="container">
+		<div class="footer__nav">
+			<ul class='footer__widget'>
+				<li><a href="#">О магазине</a></li>
+				<li><a href="#">Вакансии</a></li>
+				<li><a href="#">Вопросы и ответы</a></li>
+				<li><a href="#">Преимущества</a></li>
+				<li><a href="#">Безопасность</a></li>
+				<li><a href="#">Модный блог</a></li>
+				<li><a href="#">Публичная оферта</a></li>
+				<li><a href="#">Отзывы</a></li>
+			</ul>
+			<ul class='footer__widget'>
+				<li><a href="#">Заказ и примерка</a></li>
+				<li><a href="#">Оплата</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Обмен и возврат</a></li>
+				<li><a href="#">Таблица размеров</a></li>
+				<li><a href="#">Уход за изделиями</a></li>
+			</ul>
+		</div>
+		<div class="footer__social">
+			<a href="#" target='_blank' class="icon-od"></a>
+			<a href="#" target='_blank' class="icon-vk"></a>
+			<a href="#" target='_blank' class="icon-fb"></a>
+			<a href="#" target='_blank' class="icon-g"></a>
+			<a href="#" target='_blank' class="icon-tw"></a>
+			<a href="#" target='_blank' class="icon-lj"></a>
+		</div>
+		<div class="subscribe">
+			<form action="#" id='subscribe'>
+				<div class="subscribe__in">
+					<input type="email" class='subscribe__input placeholder validate' data-placeholder='Моя почта'>
+				</div>
+				<input type="submit" value='Подписаться на рассылку' class='subscribe__submit'>
+			</form>
+		</div>
+		<!-- end subscribe -->
+		<div class="footer__link">
+			<a href="#modalContact" class='openModal'>Связаться с руководством</a>
+		</div>
+		<div class="footer__contact">
+			<div class="footer__contact--digital">
+				<p><a href="mailto:mail@belmoda.ru">mail@belmoda.ru</a></p>
+				<p>+7 (495) 374-63-80</p>
+			</div>
+			<div class="footer__contact--address">
+				<p>107140 город Москва</p>
+				<p>Комсомольская площадь 3/30, строение 3, офис 301</p>
+			</div>
+		</div>
+		<!-- end footer__contact -->
+		<div class="footer__copyright">
+			<p>© 2006 — 2014 ООО «БелМода»</p>
+		</div>
+	</div>
+</div>
+<!-- end footer--mobile -->
+
 <!-- begin top-btn -->
 <div id="goTop" style="display: none"></div>
 <!-- end top-btn -->
 
+<!-- begin modals -->
+<div style='display: none'>
+	<div id="modalLogin" class="modal">
+		<div class="modal__row">
+		    <form class='login' action="#">
+		    	<p class="form__row">
+		    		<input class='login__email placeholder validate' type="email" data-placeholder='Почта'>
+		    	</p>
+		    	<p class="form__row">
+		    		<input class='placeholder' type="password" data-placeholder='Пароль'>
+		    	</p>
+		    	<p class="form__row">
+		    		<input class='btn login__submit' type="submit" value='Войти'>
+		    	</p>
+		    	<p class="form__row">
+		    		<input type="checkbox" id='login__checkbox'>
+		    		<label for="login__checkbox">Запомнить меня</label>
+		    	</p>
+			</form>
+		</div>
+	    <div class="modal__row fastlogin">
+	    	<p>Быстрый вход</p>
+	    	<div class="fastlogin__imgs">
+	    		<a href="#"><img src="http://placehold.it/32x32" alt=""></a>
+	    		<a href="#"><img src="http://placehold.it/32x32" alt=""></a>
+	    		<a href="#"><img src="http://placehold.it/32x32" alt=""></a>
+	    		<a href="#"><img src="http://placehold.it/32x32" alt=""></a>
+	    	</div>
+	    </div>
+	    <div class="modal__row">
+	    	<p><a class='openModal' href="#modalRegister">Регистрация</a></p>
+	    	<p><a class='openModal' href="#modalRemind">Напомнить пароль</a></p>
+	    	<p><a href="#modalMail" class='openModal'>Не получили письмо с инструкциями?</a></p>
+	    </div>
+	</div>
+	<div class="modal" id="modalOrder">
+		<div class="modal__row">
+			<form action="#">
+				<p class="form__row">
+					<input class='placeholder' type="text" maxlength="15" data-placeholder='Имя'>
+				</p>
+				<p class="form__row">
+					<input class='placeholder' type="text" maxlength="15" data-placeholder='Телефон'>
+				</p>
+				<p class="form__row">
+					<p class='text'>Менеджер свяжется с вами в течение 15 минут</p>
+					<input type="submit" class='btn' value='Отправить'>
+				</p>
+			</form>
+		</div>
+	</div>
+	<div class="modal" id="modalRegister">
+		<div class="modal__row">
+			<form action="#">
+				<p class="form__row">
+					<input type="text" class='placeholder' maxlength="15" data-placeholder='Имя'>
+				</p>
+				<p class="form__row">
+					<input type="text" class="placeholder validate" data-placeholder='Почта'>
+				</p>
+				<p class="form__row">
+					<input type="text" class='placeholder password1' data-placeholder='Пароль'>
+					<input type="text" class='placeholder password2' data-placeholder='Повторите пароль'>
+				</p>
+				<p class="form__row">
+					<img src="http://placehold.it/170x50" alt="">
+					<input type="text" class='placeholder' data-placeholder='Код с картинки'>
+				</p>
+				<p class="form__row">
+					<input type="checkbox" id='register__checkbox'><label for="register__checkbox">Я согласен с условиями <a href="#">соглашения</a></label>
+				</p>
+				<p class="form__row">
+					<input type="submit" class="btn" value='Зарегистрироваться'>
+				</p>
+			</form>
+		</div>
+		<div class="modal__row">
+			<div class="modal__row">
+		    	<p><a class='openModal' href="#modalLogin">Вход</a></p>
+		    	<p><a href="#modalRemind" class='openModal'>Напомнить пароль</a></p>
+		    	<p><a href="#modalMail" class='openModal'>Не получили письмо с инструкциями?</a></p>
+	    </div>
+		</div>
+	</div>
+	<div class="modal" id="modalRemind">
+		<div class="modal__row">
+			<form action="#">
+				<p class="form__row">
+					<input type="text" class="placeholder validate" data-placeholder='Почта'>
+				</p>
+				<p class="form__row">
+					<input type="submit" class="btn" value="Напомнить">
+				</p>
+			</form>
+		</div>
+		<div class="modal__row">
+			<p><a href="#modalLogin" class='openModal'>Вход</a></p>
+			<p><a href="#modalMail" class='openModal'>Не получили письмо с инструкциями?</a></p>
+		</div>
+	</div>
+	<div class="modal" id="modalMail">
+		<div class="modal__row">
+			<form action="#">
+				<p class="form__row">
+					<input type="text" class="placeholder validate" data-placeholder='Почта'>
+				</p>
+				<p class="form__row">
+					<input type="submit" value="Отправить" class="btn">
+				</p>
+			</form>
+		</div>
+		<div class="modal__row">
+			<p><a href="#modalLogin" class='openModal'>Вход</a></p>
+			<p><a href="#modalRegister" class='openModal'>Регистрация</a></p>
+			<p><a class='openModal' href="#modalRemind">Напомнить пароль</a></p>
+		</div>
+	</div>
+	<div class="modal" id="modalCall">
+		<div class="modal__row">
+			<form action="#">
+				<p class="form__row">
+					<input type="text" class="placeholder" maxlength='40' data-placeholder='ФИО'>
+				</p>
+				<p class="form__row">
+					<select name="" id="countriesSelect">
+						<option disabled>Страна</option>
+						<option value="1">Россия</option>
+						<option value="2">Украина</option>
+						<option value="3">Белоруссия</option>
+						<option value="4">США</option>
+						<option value="5">Польша</option>
+					</select>
+					<input type="text" id='phoneInput' placeholder='Телефон' maxlength="18">
+					<input type="text" class="placeholder validate" data-placeholder='Почта'>
+				</p>
+				<p class="form__row">
+					<select name="" id="countriesSelect">
+						<option disabled selected="">Федеральный округ</option>
+						<option value="1">Россия</option>
+						<option value="2">Украина</option>
+						<option value="3">Белоруссия</option>
+						<option value="4">США</option>
+						<option value="5">Польша</option>
+					</select>
+				</p>
+				<p class="form__row">
+					<textarea name="" id="" rows='5' class="placeholder" data-placeholder='Комментарий'>Комментарий</textarea>
+				</p>
+				<p class="form__row">
+					<img src="http://placehold.it/170x50" alt="">
+					<input type="text" class='placeholder' data-placeholder='Код с картинки'>
+				</p>
+				<p class="form__row"><input type="submit" value="Заказать звонок" class="btn"></p>
+			</form>
+		</div>
+	</div>
+	<div class="modal" id="modalContact">
+		<div class="modal__row">
+			<form action="#">
+				<p class="form__row">
+					<input type="text" class="placeholder" data-placeholder='ФИО'>
+				</p>
+				<p class="form__row">
+					<input type="text" class='placeholder' data-placeholder='Телефон' maxlength="15">
+					<input type="text" class="placeholder validate" data-placeholder='Почта'>
+				</p>
+				<p class="form__row">
+					<input type="text" class="placeholder" data-placeholder='Федеральный округ'>
+				</p>
+				<p class="form__row">
+					<textarea name="" id="" rows='5' class="placeholder" data-placeholder='Задайте свой вопрос'>Задайте свой вопрос</textarea>
+				</p>
+				<p class="form__row">
+					<img src="http://placehold.it/170x50" alt="">
+					<input type="text" class='placeholder' data-placeholder='Код с картинки'>
+				</p>
+				<p class="form__row"><input type="submit" value="Заказать звонок" class="btn"></p>
+			</form>
+		</div>
+	</div>
+	<div class="modal modalSuccess" id="modalSuccess">
+		<div class="modal__row">
+			<div class="modal__title--success">
+				<h2>Здорово!</h2>
+			</div>
+			<div class="modal__icon">
+				<img src="http://placehold.it/200x85" alt="">
+			</div>
+			<div class="mocal__action">
+				<div class="modal__action--main">Проверьте почту</div>
+				<div class="modal__action--secondary">и подтвердите подписку</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-infoblock" id='modalInfoblock'>
+		<ul class='modal-infoblock__menu'>
+			<li><a href="#" class="modal-infoblock__menu-item is-active" data-href='order'>Заказ и примерка</a></li>
+			<li><a href="#" class="modal-infoblock__menu-item" data-href='payment'>Оплата</a></li>
+			<li><a href="#" class="modal-infoblock__menu-item" data-href='shipping'>Доставка</a></li>
+			<li><a href="#" class="modal-infoblock__menu-item" data-href='return'>Обмен и возврат</a></li>
+			<li><a href="#" class="modal-infoblock__menu-item" data-href='warranty'>Гарантии качества</a></li>
+		</ul>
+		<div class="modal-infoblock__submenu is-active modal-infoblock__order">
+			<div class="modal__row">
+				<img src="http://placehold.it/600x300" alt="">
+			</div>
+			<div class="modal__row">
+				<h3 class="list-title">Сделать заказ можно одним из способов:</h3>
+				<ul>
+					<li>Через корзину интернет-магазина</li>
+					<li>По телефону +7 495 374-63-90</li>
+					<li>По почте mail@clubmoda.ru</li>
+					<li>По скайпу "clubmoda"</li>
+				</ul>
+			</div>
+		</div>
+		<div class="modal-infoblock__submenu modal-infoblock__payment">
+			<div class="modal__row">
+				<img src="http://placehold.it/600x300" alt="">
+			</div>
+			<div class="modal__row">
+				<h3 class="list-title">Оплата:</h3>
+				<ul>
+					<li>Через корзину интернет-магазина</li>
+					<li>По телефону +7 495 374-63-90</li>
+					<li>По почте mail@clubmoda.ru</li>
+					<li>По скайпу "clubmoda"</li>
+				</ul>
+			</div>
+		</div>
+		<div class="modal-infoblock__submenu modal-infoblock__shipping">
+			<div class="modal__row">
+				<img src="http://placehold.it/600x300" alt="">
+			</div>
+			<div class="modal__row">
+				<h3 class="list-title">Доставка:</h3>
+				<ul>
+					<li>Через корзину интернет-магазина</li>
+					<li>По телефону +7 495 374-63-90</li>
+					<li>По почте mail@clubmoda.ru</li>
+					<li>По скайпу "clubmoda"</li>
+				</ul>
+			</div>
+		</div>
+		<div class="modal-infoblock__submenu modal-infoblock__return">
+			<div class="modal__row">
+				<img src="http://placehold.it/600x300" alt="">
+			</div>
+			<div class="modal__row">
+				<h3 class="list-title">Возврат:</h3>
+				<ul>
+					<li>Через корзину интернет-магазина</li>
+					<li>По телефону +7 495 374-63-90</li>
+					<li>По почте mail@clubmoda.ru</li>
+					<li>По скайпу "clubmoda"</li>
+				</ul>
+			</div>
+		</div>
+		<div class="modal-infoblock__submenu modal-infoblock__warranty">
+			<div class="modal__row">
+				<img src="http://placehold.it/600x300" alt="">
+			</div>
+			<div class="modal__row">
+				<h3 class="list-title">Гарантии:</h3>
+				<ul>
+					<li>Через корзину интернет-магазина</li>
+					<li>По телефону +7 495 374-63-90</li>
+					<li>По почте mail@clubmoda.ru</li>
+					<li>По скайпу "clubmoda"</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- end modals -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>

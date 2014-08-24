@@ -1,0 +1,137 @@
+.modal
+	padding: 70px
+	background: #fff
+	img
+		max-width: 100%
+	input[type='text'], input[type='email'], input[type='password']
+		width: 100%
+		height: 30px
+		padding-left: 7px
+
+		border: 1px solid #959595
+
+		font:
+			size: 1em
+			family: "HelveticaNeueLight"
+	input+input
+		margin-top: 5px
+	select
+		font:
+			family: "HelveticaNeueLight"
+			size: 1em
+	select+input
+		margin-top: 5px
+	input[type='checkbox'] + label
+		position: relative
+		padding-left: 27px
+
+		cursor: pointer
+
+		font-size: 0.875em
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0px
+			display: inline-block
+			width: 15px
+			height: 15px
+
+			+s(checkbox)
+	input[type='checkbox']:checked + label
+		&:before
+			+s(checkbox-checked)
+	input[type='checkbox']
+		display: none
+	textarea
+		width: 100%
+		resize: none
+		font:
+			family: "HelveticaNeueLight"
+			size: 1em
+	.modal__row
+		margin-bottom: 20px
+	a
+		font:
+			size: 0.75em
+			family: "HelveticaNeueRoman"
+	label a
+		font-size: 1em
+	.form__row
+		margin-bottom: 15px
+	.text
+		font-size: 0.875em
+		margin-bottom: 10px
+	.modal__title--success h2
+		margin-bottom: 80px
+		font:
+			family: "HelveticaNeueThin"
+			weight: lighter
+			size: 3.75em
+	.modal__icon
+		margin-bottom: 15px
+	.modal__action--main
+		font:
+			family: "HelveticaNeueThin"
+			size: 2.5em
+		color: #a5509e
+	.modal__action--secondary
+		font-size: 1.25em
+	.list-title
+		margin-bottom: 15px
+		font:
+			family: "HelveticaNeueLight"
+			size: 1.25em
+			weight: lighter
+#modalLogin
+	.fastlogin
+		font-size: 0.875em
+	.fastlogin__imgs
+		margin-top: 10px
+#countriesSelect
+	width: 100%
+	height: 30px
+.modalSuccess
+	text-align: center
+
+.modal-infoblock
+.modal-infoblock__menu
+	position: absolute
+	top: -35px
+	left: 0
+
+	+clr
+	li
+		float: left
+.modal-infoblock__menu-item
+	display: block
+	padding: 0 13px
+	line-height: 35px
+
+	font-size: 1em !important
+	
+	background: #e3dfda
+	color: #666
+
+	text-decoration: none
+	&:hover
+		color: #fff
+		background: #8bc638
+	&.is-active
+		background: #fff
+		color: #000
+.modal-infoblock__submenu
+	display: none
+	&.is-active
+		display: block
+	ul
+		list-style-type: disc
+		margin-left: 18px
+	li
+		font-size: 0.875em
+		margin-top: 5px
+input::-webkit-input-placeholder 
+	color: #000
+
+input:-moz-placeholder 
+	color: #000

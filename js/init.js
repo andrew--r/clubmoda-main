@@ -1,5 +1,12 @@
 head.load(
 	"js/lib/jquery.js",
 	"js/lib/owl.carousel.js",
-	"js/common.js"
+	"js/lib/jquery.fancybox.pack.js",
+	"js/lib/jquery.maskedinput.min.js",
+	"js/common.js",
+	"js/modules/sliders.js",
+	"js/modules/modals.js",
+	"js/modules/placeholder.js",
+	"js/modules/validate.js",
+	"js/modules/infoblock.js"
 );
